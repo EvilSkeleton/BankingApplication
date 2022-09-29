@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<style type="text/css">
+.backgrd {
+	height: 500px; /* You must set a specified height */
+	background-position: top; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
+	background-image: url("https://img.freepik.com/free-vector/vector-background-bank-office-counters-managers-clients-bright-interior-finance-place-consulting-lobby-showcase-with-exchange-rate-business-concept_33099-1303.jpg?w=2000");
+ 	background-color: #cccccc;
+}
+.center {
+	text-align : center;
+	margin-left: auto;
+  margin-right: auto;	
+}
+.signbox {
+  	text-align : center;
+}
+</style>
+<body class="backgrd">
+	<iframe src="HomeNav.html" scrolling="no" style="border:none;height:60px;width:100%" title="NavBar"></iframe>
+
+	<div class="container" style="display: flex; height: 150%;">
+        <div style="width: 50%; background: green">
+            Left Div
+        </div>
+        <div style="flex-grow: 1; background:red;align-items: center;justify-content: center;padding-right: 30px;padding-left: 30px">
+        	<div class="signbox" style="background : blue;">
+				<h1>Sign Up</h1>
+				<form action="SignUpServlet" method="post">
+					Account Information<br>
+					-----------------------------------------------------------------<br>
+						<table class="center">
+							<tr>
+								<td align="right">Account Type : </td>
+								<td align="left">
+									<select>
+										<option value=""></option>
+										<option value="">Checking Account</option>
+										<option value="">Savings Account</option>
+									</select>
+								</td>
+							</tr>
+						</table>
+						<br><br>
+					Personal Information<br>
+					-----------------------------------------------------------------<br>
+						<table class="center">
+							<tr>
+								<td align="right">Select Gender :</td>
+								<td align="left">
+									<input type = "radio" name = "gender" value="Male">Male &nbsp;&nbsp;
+									<input type = "radio" name = "gender" value="female">Female &nbsp;&nbsp;
+									<input type = "radio" name = "gender" value="other">other &nbsp;&nbsp;
+								</td>
+							</tr>
+							<tr>
+								<td align="right">Enter First Name :</td>
+								<td align="left"><input required="required" type = "text" name = "fname"></td>
+							</tr>
+							<tr>
+								<td align="right">Enter Second Name :</td>
+								<td align="left"><input required="required" type = "text" name = "fname"></td>
+							</tr>
+							<tr>
+								<td align="right">Enter Mobile :</td>
+								<td align="left"><input required="required" type="tel" name = "mobile"><br><br></td>
+							</tr>
+							<tr>
+								<td align="right">Enter Email :</td>
+								<td align="left"><input required="required" type = "email" name = "email"></td>
+							</tr>
+							<tr>
+								<td align="right">Address :</td>
+								<td align="left"><textarea required="required" rows="4" cols="22"></textarea></td>
+							</tr>
+							<tr>
+								<td align="right">Select Branch :</td>
+								<td align="left">
+									 <select required="required" name = "city">
+										<option value=""></option>
+										<option value="Bengaluru">Bengaluru</option>
+										<option value="Hyderabad">Hyderabad</option>
+										<option value="Mumbai">Mumbai</option>
+										<option value="Delhi">Delhi</option>
+										<option value="Kolkata">Kolkata</option>
+										<option value="Pune">Pune</option>
+										<option value="Panaji">Panaji</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td align="right">Enter Password :</td>
+								<td align="left"><input required="required" type = "password" name = "pwd"></td>
+							</tr>
+							<tr>
+								<td align="right">Re-enter Password :</td>
+								<td align="left"><input required="required" type = "password" name = "rpwd"></td>
+							</tr>
+						</table>
+<!-- 							<br><br> -->
+<!-- 							 <br><br> -->
+							 
+<!-- 							 <br><br> -->
+<!-- 							<br> <br><br> -->
+<!-- 							 <br><br> -->
+<!-- 							 <br><br> -->
+						
+						
+<!-- 								<option value="">Money Market Account</option> -->
+<!-- 								<option value="">IRA Account</option> -->
+<!-- 							</select><br><br> -->
+							
+<!-- 							Currency Type : <select name = "city"> -->
+<!-- 								<option value=""></option> -->
+<!-- 								<option value="">USD - United States Dollars</option> -->
+<!-- 								<option value="">EUR - Euro</option> -->
+<!-- 								<option value="">INR - Indian Rupee</option> -->
+<!-- 							</select><br><br> -->
+		
+		
+							
+							
+<!-- 							<br><br> -->
+							
+							
+<!-- 							Enter UserName :<span class="error">*</span> : <input type = "text" name = "user" required="required"><br><br> -->
+							
+							
+							
+							
+							
+<!-- 							Select Languages : -->
+							
+<!-- 							<input type = "checkbox" name = "l1" value="telugu"">Telugu &nbsp;&nbsp; -->
+<!-- 							<input type = "checkbox" name = "l2" value="hindi">Hindi &nbsp;&nbsp; -->
+<!-- 							<input type = "checkbox" name = "l3" value="english">English &nbsp;&nbsp; -->
+<!-- 							<br><br> -->
+								<input type="checkbox" required="required">I agree to the Terms and Conditions.&nbsp;&nbsp;<br><br>
+							
+							<input type = "submit" value="sign up"><br><br>
+							<a href="login.html">click here to sign in</a>
+				</form>
+        	</div>
+        </div>
+	</div>
+	<div class="container" style=" position : bottom ;height :25%;">
+		<div style="height :100%;width : 100%;flex-grow: 1; background : orange;">
+			Bottom Div
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+<!-- <tr> -->
+<!-- 	<td align="right"></td> -->
+<!-- 	<td align="left"></td> -->
+<!-- </tr> -->

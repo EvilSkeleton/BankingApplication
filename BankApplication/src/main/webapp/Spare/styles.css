@@ -1,0 +1,51 @@
+@charset "UTF-8";
+.background {
+	height: 500px; /* You must set a specified height */
+	background-position: top; /* Center the image */
+	background-repeat: no-repeat; /* Do not repeat the image */
+	background-size: cover; /* Resize the background image to cover the entire container */
+	background-image: url("https://img.freepik.com/free-vector/vector-background-bank-office-counters-managers-clients-bright-interior-finance-place-consulting-lobby-showcase-with-exchange-rate-business-concept_33099-1303.jpg?w=2000");
+ 	background-color: #cccccc;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #B9FFF8;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #FF4A4A;
+  color: white;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #6FEDD6;
+  color: black;
+}
+.loginbox {
+	padding : 283px 0;
+  	text-align : center;
+  	padding-top: 50px;
+ 	padding-right: 30px;
+  	padding-bottom: 50px;
+ 	padding-left: 80px;
+}
+.signbox {
+  	text-align : center;
+}
+.center {
+	text-align : center;
+	
+}
