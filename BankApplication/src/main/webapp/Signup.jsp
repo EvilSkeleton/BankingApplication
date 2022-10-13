@@ -6,6 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Signup</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="js/passwordChecker.js"></script>
 </head>
 <style>
 .background {
@@ -13,8 +15,8 @@
 	background-position: top; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: cover; /* Resize the background image to cover the entire container */
-	background-image: url("https://img.freepik.com/free-vector/vector-background-bank-office-counters-managers-clients-bright-interior-finance-place-consulting-lobby-showcase-with-exchange-rate-business-concept_33099-1303.jpg?w=2000");
- 	background-color: #cccccc;
+/* 	background-image: url("https://img.freepik.com/free-vector/vector-background-bank-office-counters-managers-clients-bright-interior-finance-place-consulting-lobby-showcase-with-exchange-rate-business-concept_33099-1303.jpg?w=2000"); */
+ 	background-color: #F9F9F9;
 }
 .center {
 	text-align : center;
@@ -27,12 +29,12 @@
 </style>
 <body class="background">
 	<x:HomeNav page="Signup"></x:HomeNav>
-	<div class="container" style="display: flex; height: 150%;">
-        <div style="width: 50%; background: green">
+	<div class="flex" style="display: flex; height: 150%;">
+        <div style="width: 50%; background: ">
             Left Div
         </div>
-        <div style="flex-grow: 1; background:red;align-items: center;justify-content: center;padding-right: 30px;padding-left: 30px">
-        	<div class="signbox" style="background : blue;">
+        <div style="flex-grow: 1; background: ;align-items: center;justify-content: center;padding-right: 30px;padding-left: 30px">
+        	<div class="card" style="background : ;text-align: center;height:100%;">
 				<h1>Sign Up</h1>
 				<form action="SignUpServlet" method="post">
 					Account Information<br>
@@ -106,59 +108,18 @@
 							</tr>
 							<tr>
 								<td align="right">Re-enter Password :</td>
-								<td align="left"><input required="required" type = "password" name = "rpwd"></td>
+								<td align="left"><input required="required" type = "password" name = "rpwd" onkeyup="checkPass(); return false;">
+								<p id="confirmMessage" style="margin-top: 10x;"></td>
 							</tr>
 						</table>
-<!-- 							<br><br> -->
-<!-- 							 <br><br> -->
-							 
-<!-- 							 <br><br> -->
-<!-- 							<br> <br><br> -->
-<!-- 							 <br><br> -->
-<!-- 							 <br><br> -->
-						
-						
-<!-- 								<option value="">Money Market Account</option> -->
-<!-- 								<option value="">IRA Account</option> -->
-<!-- 							</select><br><br> -->
-							
-<!-- 							Currency Type : <select name = "city"> -->
-<!-- 								<option value=""></option> -->
-<!-- 								<option value="">USD - United States Dollars</option> -->
-<!-- 								<option value="">EUR - Euro</option> -->
-<!-- 								<option value="">INR - Indian Rupee</option> -->
-<!-- 							</select><br><br> -->
-		
-		
-							
-							
-<!-- 							<br><br> -->
-							
-							
-<!-- 							Enter UserName :<span class="error">*</span> : <input type = "text" name = "user" required="required"><br><br> -->
-							
-							
-							
-							
-							
-<!-- 							Select Languages : -->
-							
-<!-- 							<input type = "checkbox" name = "l1" value="telugu"">Telugu &nbsp;&nbsp; -->
-<!-- 							<input type = "checkbox" name = "l2" value="hindi">Hindi &nbsp;&nbsp; -->
-<!-- 							<input type = "checkbox" name = "l3" value="english">English &nbsp;&nbsp; -->
-<!-- 							<br><br> -->
 								<input type="checkbox" required="required">I agree to the Terms and Conditions.&nbsp;&nbsp;<br><br>
-							
-							<input type = "submit" value="sign up"><br><br>
-<!-- 							<a href="login.html">click here to sign in</a> -->
+							<input class="btn btn-primary" type = "submit" value="Sign-Up"><br><br>
 				</form>
         	</div>
         </div>
 	</div>
-	<div class="container" style=" position : bottom ;height :25%;">
-		<div style="height :100%;width : 100%;flex-grow: 1; background : orange;">
-			Bottom Div
-		</div>
+	<div class="flex" style=" position : bottom ;height :25%;">
+		<x:Footer></x:Footer>
 	</div>
 </body>
 </html>

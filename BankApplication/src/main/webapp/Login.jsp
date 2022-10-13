@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Login</title>
+<link href="css/bootstrap.css" rel="stylesheet">
 </head>
 <style>
 .background {
@@ -13,8 +14,8 @@
 	background-position: top; /* Center the image */
 	background-repeat: no-repeat; /* Do not repeat the image */
 	background-size: cover; /* Resize the background image to cover the entire container */
-	background-image: url("https://img.freepik.com/free-vector/vector-background-bank-office-counters-managers-clients-bright-interior-finance-place-consulting-lobby-showcase-with-exchange-rate-business-concept_33099-1303.jpg?w=2000");
- 	background-color: #cccccc;
+/* 	background-image: url("https://img.freepik.com/free-vector/vector-background-bank-office-counters-managers-clients-bright-interior-finance-place-consulting-lobby-showcase-with-exchange-rate-business-concept_33099-1303.jpg?w=2000"); */
+ 	background-color: #F9F9F9;
 }
 label {
   display: block;
@@ -29,19 +30,27 @@ input:invalid {
 }
 .center {
 	text-align : center;
-	margin-left: auto;
+	margin-left:auto;
   margin-right: auto;	
+}
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: auto;
 }
 </style>
 <body class="background">
 	<x:HomeNav page="Login"></x:HomeNav>
-	<div class="container" style="display: flex; height: 150%;">
-        <div style="width: 50%; background: green;">
+	<div class="flex" style="display: flex;width:100%; height: 150%;">
+        <div style="width: 50%; background: ;">
             Left Div
         </div>
-        <div style="flex-grow: 1; background:red;align-items: center;justify-content: center;padding:150px">
-        	<div class="loginbox" style="background : blue;">
-				<form action="LoginServlet" method="post" class="center">
+        <div class="center" style="flex-grow: 1; background:;align-items: center;justify-content: center;padding-top:150px">
+        	<div class="center" style="background : ;padding-left: 20%;padding-right: 20%">
+				<div class="card">
+				<form action="LoginServlet" method="post">
+				<br>
 					<h1>Login Page</h1>
 						<table class="center">
 								<tr>
@@ -49,20 +58,20 @@ input:invalid {
 									<td align="left"><input type="text" name = "user"></td>
 								</tr>
 								<tr>
+								<tr>
 									<td align="right"><label for="pwd">Enter Password : </label></td>
 									<td align="left"><input type = "password" name = "pwd"></td>
 								</tr>
 						</table>
 <!-- 							<input type = "submit" value = "login"><br> -->
-								<button type="submit">Login</button>
+								<input class="btn btn-primary" type="submit" value="Login"><br><br><br>
 				</form>
+								</div>
         	</div>
         </div>
 	</div>
-	<div class="container" style=" position : bottom ;height :25%;">
-		<div style="height :100%;width : 100%;flex-grow: 1; background : orange;">
-			Bottom Div
-		</div>
+	<div class="flex" style=" position : bottom ;height :25%;">
+		<x:Footer></x:Footer>
 	</div>
 </body>
 </html>

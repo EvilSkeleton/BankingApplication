@@ -24,4 +24,8 @@
 			<required>true</required>
 		</attribute>
 	</tag>
+	<tag>
+		<name>Footer</name>
+		<tag-class>Nav.Footer</tag-class>
+	</tag>
 </taglib>

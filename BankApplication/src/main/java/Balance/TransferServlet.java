@@ -16,12 +16,16 @@ import javax.servlet.http.HttpServletResponse;
 
 import Java.CustomerManager;
 
-@WebServlet("/DepServlet")
-public class DepServlet extends HttpServlet {
+/**
+ * Servlet implementation class TransferServlet
+ */
+@WebServlet("/TransferServlet")
+public class TransferServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+
 		response.setContentType("text/html");
 		
 		String userName = null;
@@ -51,14 +55,14 @@ public class DepServlet extends HttpServlet {
             if(rs.getString(1).equals(pass) || rs.getString(1) == pass)
             {
             	double bal = rs.getDouble(2);
-            	bal = bal + amt;
+            	bal = bal - amt;
             	PreparedStatement st1 = conn.prepareStatement("update Customer set balance=? where accountNo=?");
             	st1.setDouble(1,bal);
             	st1.setString(2,userName);
             	st1.executeUpdate();
 //            	out.println("<font color=red>Transaction Succesful.</font>");
             	out.print("<script type=\"text/javascript\">alert(\"The Transaction is succesful! :)\")</script>");
-            	RequestDispatcher rd = request.getRequestDispatcher("Deposit.jsp");
+            	RequestDispatcher rd = request.getRequestDispatcher("Withdraw.jsp");
         		rd.include(request, response);
             }
             else
@@ -78,4 +82,5 @@ public class DepServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
+
 }

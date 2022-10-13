@@ -64,9 +64,9 @@ public class HomeNav extends TagSupport
     	  {
     	  case "Home":
     		  out.print("<body>\n"
-    		  		+ "	<div class=\"topnav\">\n"
-    		  		+ "        <b><img src=\"bank.png\" alt=\"alternatetext\" style=\"width:50px;height:50px;padding-left: 5px;padding-right: 5px\"></b>\n"
-    		  		+ "        <a>Perfios Bank</a>\n"
+    		  		+ "	<div class=\"topnav fixed-top\">\n"
+    		  		+ "        <b><img src=\"image/bank.png\" alt=\"alternatetext\" style=\"width:50px;height:50px;padding-left: 5px;padding-right: 5px\"></b>\n"
+    		  		+ "        <a style='color: white'>Perfios Bank</a>\n"
     		  		+ "	    <a class=\"active\" href=\"Home.jsp\">Home</a>\n"
     		  		+ "	    <a href=\"Signup.jsp\">Signup</a>\n"
     		  		+ "	    <a href=\"Login.jsp\">Login</a>\n"
@@ -77,8 +77,8 @@ public class HomeNav extends TagSupport
     	  case "Signup":
     		  out.print("<body>\n"
     		  		+ "	<div class=\"topnav\">\n"
-    		  		+ "        <b><img src=\"bank.png\" alt=\"alternatetext\" style=\"width:50px;height:50px;padding-left: 5px;padding-right: 5px\"></b>\n"
-    		  		+ "        <a>Perfios Bank</a>\n"
+    		  		+ "        <b><img src=\"image/bank.png\" alt=\"alternatetext\" style=\"width:50px;height:50px;padding-left: 5px;padding-right: 5px\"></b>\n"
+    		  		+ "        <a style='color: white'>Perfios Bank</a>\n"
     		  		+ "	    <a href=\"Home.jsp\">Home</a>\n"
     		  		+ "	    <a class=\"active\" href=\"Signup.jsp\">Signup</a>\n"
     		  		+ "	    <a href=\"Login.jsp\">Login</a>\n"
@@ -89,8 +89,8 @@ public class HomeNav extends TagSupport
     	  case "Login":
     		  out.print("<body>\n"
     		  		+ "	<div class=\"topnav\">\n"
-    		  		+ "        <b><img src=\"bank.png\" alt=\"alternatetext\" style=\"width:50px;height:50px;padding-left: 5px;padding-right: 5px\"></b>\n"
-    		  		+ "        <a>Perfios Bank</a>\n"
+    		  		+ "        <b><img src=\"image/bank.png\" alt=\"alternatetext\" style=\"width:50px;height:50px;padding-left: 5px;padding-right: 5px\"></b>\n"
+    		  		+ "        <a style='color: white'>Perfios Bank</a>\n"
     		  		+ "	    <a href=\"Home.jsp\">Home</a>\n"
     		  		+ "	    <a href=\"Signup.jsp\">Signup</a>\n"
     		  		+ "	    <a class=\"active\" href=\"Login.jsp\">Login</a>\n"
@@ -101,8 +101,8 @@ public class HomeNav extends TagSupport
     	  case "About":
     		  out.print("<body>\n"
     		  		+ "	<div class=\"topnav\">\n"
-    		  		+ "        <b><img src=\"bank.png\" alt=\"alternatetext\" style=\"width:50px;height:50px;padding-left: 5px;padding-right: 5px\"></b>\n"
-    		  		+ "        <a>Perfios Bank</a>\n"
+    		  		+ "        <b><img src=\"image/bank.png\" alt=\"alternatetext\" style=\"width:50px;height:50px;padding-left: 5px;padding-right: 5px\"></b>\n"
+    		  		+ "        <a style='color: white'>Perfios Bank</a>\n"
     		  		+ "	    <a href=\"Home.jsp\">Home</a>\n"
     		  		+ "	    <a href=\"Signup.jsp\">Signup</a>\n"
     		  		+ "	    <a href=\"Login.jsp\">Login</a>\n"
