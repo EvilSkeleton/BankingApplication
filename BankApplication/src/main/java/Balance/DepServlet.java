@@ -14,7 +14,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import Dashboard.deposit;
 import Java.CustomerManager;
+import Transactions.depositTxn;
 
 @WebServlet("/DepServlet")
 public class DepServlet extends HttpServlet {
@@ -36,46 +38,11 @@ public class DepServlet extends HttpServlet {
 		String user = request.getParameter("amt");
 		double amt = Double.parseDouble(user);
 		String pass = request.getParameter("pwd");
-		PreparedStatement st=null;
+//		String sid = request.getParameter("accountNo");
+//		int acc = Integer.parseInt(sid);
 		
-		Connection conn=null;
+		deposit.main(userName,amt,pass,request,response);
 		
-		try 
-		{
-			conn=CustomerManager.getConnection();
-			st = conn.prepareStatement("select pass,balance from Customer where accountNo=?");
-			st.setString(1,userName);
-            ResultSet rs = st.executeQuery();
-            rs.next();
-            PrintWriter out = response.getWriter();
-            if(rs.getString(1).equals(pass) || rs.getString(1) == pass)
-            {
-            	double bal = rs.getDouble(2);
-            	bal = bal + amt;
-            	PreparedStatement st1 = conn.prepareStatement("update Customer set balance=? where accountNo=?");
-            	st1.setDouble(1,bal);
-            	st1.setString(2,userName);
-            	st1.executeUpdate();
-//            	out.println("<font color=red>Transaction Succesful.</font>");
-            	out.print("<script type=\"text/javascript\">alert(\"The Transaction is succesful! :)\")</script>");
-            	RequestDispatcher rd = request.getRequestDispatcher("Deposit.jsp");
-        		rd.include(request, response);
-            }
-            else
-            {
-//        		out.println("<font color=red>Password is wrong.</font>");
-            	out.print("<script type=\"text/javascript\">alert(\"The Password was wrong! :(\")</script>");
-        		RequestDispatcher rd = request.getRequestDispatcher("Dashboard.jsp");
-        		rd.include(request, response);
-            }
-            
-            
-            st.close();
-            conn.close();
-		}
-		catch (Exception e) 
-		{
-			e.printStackTrace();
-		}
+//		depositTxn.main(acc, amt);
 	}
 }

@@ -37,7 +37,7 @@
         
 	%>
 	<div class="center">
-	<table style="text-align: left;">
+	<table style="text-align: left;font-size: 20px;">
 		<tr>
 			<td align="right">Balance : </td>
 			<td align="left"><%= rs.getString(1) %></td>

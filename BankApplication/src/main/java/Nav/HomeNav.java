@@ -23,96 +23,85 @@ public class HomeNav extends TagSupport
       
       try
       {
+    	  out.print("<head>\n"
+    	  		+ "    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n"
+    	  		+ "    <link href=\"https://getbootstrap.com/docs/5.2/assets/css/docs.css\" rel=\"stylesheet\">\n"
+    	  		+ "    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js\"></script>\n"
+    	  		+ "<link href=\"css/bootstrap.css\" rel=\"stylesheet\">\n"
+    	  		+ "</head>");
+    	  
     	  out.print("<style type=\"text/css\">\n"
-    	  		+ "/* Add a black background color to the top navigation */\n"
-    	  		+ ".topnav {\n"
-    	  		+ "  background-color: #4C3A51;\n"
-    	  		+ "  overflow: hidden;\n"
-    	  		+ "  width: 100%;\n"
-    	  		+ "}\n"
-    	  		+ "\n"
-    	  		+ "/* Style the links inside the navigation bar */\n"
-    	  		+ ".topnav a {\n"
-    	  		+ "  float: left;\n"
-    	  		+ "  color: white;\n"
-    	  		+ "  text-align: center;\n"
-    	  		+ "  padding: 14px 16px;\n"
-    	  		+ "  text-decoration: none;\n"
-    	  		+ "  font-size: 23px;\n"
-    	  		+ "}\n"
-    	  		+ ".topnav b {\n"
-    	  		+ "  float: left;\n"
-    	  		+ "  color: black;\n"
-    	  		+ "  text-align: center;\n"
-    	  		+ "  text-decoration: none;\n"
-    	  		+ "  font-size: 17px;\n"
-    	  		+ "}\n"
-    	  		+ "\n"
-    	  		+ "/* Change the color of links on hover */\n"
-    	  		+ ".topnav a:hover {\n"
-    	  		+ "  background-color: #FF4A4A;\n"
-    	  		+ "  color: white;\n"
-    	  		+ "}\n"
-    	  		+ "\n"
-    	  		+ "/* Add a color to the active/current link */\n"
-    	  		+ ".topnav a.active {\n"
-    	  		+ "  background-color: #6FEDD6;\n"
-    	  		+ "  color: black;\n"
+    	  		+ ".navbar {\n"
+    	  		+ "--bs-navbar-color: rgba(255,255,255,0.9);\n"
+    	  		+ "--bs-navbar-active-color: rgba(255,255,255,0.9);\n"
+    	  		+ "font-size: 20px;\n"
+    	  		+ "--bs-navbar-padding-y: 0rem;\n"
     	  		+ "}\n"
     	  		+ "</style>");
+    	  
+    	  out.print("<body>\n"
+    	  		+ "\n"
+    	  		+ "<header>\n"
+    	  		+ "  <nav class=\"navbar navbar-expand-md fixed-top\" style=\"background-color: #4C3A51\">\n"
+    	  		+ "    <div class=\"container-fluid\">\n"
+    	  		+ "      <img src=\"image/bblogo1.webp\" alt=\"Logo\" width=\"40\" height=\"30\" class=\"d-inline-block align-text-top\">\n"
+    	  		+ "      <a class=\"navbar-brand\" href=\"Home.jsp\" style=\"color: white;padding-left: 5px\">Bombay Bank</a>\n"
+    	  		+ "      <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarCollapse\" aria-controls=\"navbarCollapse\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n"
+    	  		+ "        <span class=\"navbar-toggler-icon\"></span>\n"
+    	  		+ "      </button>\n"
+    	  		+ "      <div class=\"collapse navbar-collapse\" id=\"navbarCollapse\">\n"
+    	  		+ "        <ul class=\"navbar-nav me-auto mb-2 mb-md-0\">");
+    	  
     	  switch(page)
     	  {
     	  case "Home":
-    		  out.print("<body>\n"
-    		  		+ "	<div class=\"topnav fixed-top\">\n"
-    		  		+ "        <b><img src=\"image/bank.png\" alt=\"alternatetext\" style=\"width:50px;height:50px;padding-left: 5px;padding-right: 5px\"></b>\n"
-    		  		+ "        <a style='color: white'>Perfios Bank</a>\n"
-    		  		+ "	    <a class=\"active\" href=\"Home.jsp\">Home</a>\n"
-    		  		+ "	    <a href=\"Signup.jsp\">Signup</a>\n"
-    		  		+ "	    <a href=\"Login.jsp\">Login</a>\n"
-    		  		+ "	    <a href=\"About.jsp\">About</a>\n"
-    		  		+ "	</div>\n"
-    		  		+ "</body>");
+    		  out.print("<li class=\"nav-item\">\n"
+    		  		+ "            <a class=\"nav-link active\" aria-current=\"page\" href=\"Home.jsp\">Home</a>\n"
+    		  		+ "          </li>\n"
+    		  		+ "          <li class=\"nav-item\">\n"
+    		  		+ "            <a class=\"nav-link\" href=\"Signup.jsp\">Sign-up</a>\n"
+    		  		+ "          </li>\n"
+    		  		+ "          <li class=\"nav-item\">\n"
+    		  		+ "            <a class=\"nav-link\" href=\"Login.jsp\">Login</a>\n"
+    		  		+ "          </li>");
     		  break;
     	  case "Signup":
-    		  out.print("<body>\n"
-    		  		+ "	<div class=\"topnav\">\n"
-    		  		+ "        <b><img src=\"image/bank.png\" alt=\"alternatetext\" style=\"width:50px;height:50px;padding-left: 5px;padding-right: 5px\"></b>\n"
-    		  		+ "        <a style='color: white'>Perfios Bank</a>\n"
-    		  		+ "	    <a href=\"Home.jsp\">Home</a>\n"
-    		  		+ "	    <a class=\"active\" href=\"Signup.jsp\">Signup</a>\n"
-    		  		+ "	    <a href=\"Login.jsp\">Login</a>\n"
-    		  		+ "	    <a href=\"About.jsp\">About</a>\n"
-    		  		+ "	</div>\n"
-    		  		+ "</body>");
+    		  out.print("<li class=\"nav-item\">\n"
+    		  		+ "            <a class=\"nav-link\" aria-current=\"page\" href=\"Home.jsp\">Home</a>\n"
+    		  		+ "          </li>\n"
+    		  		+ "          <li class=\"nav-item\">\n"
+    		  		+ "            <a class=\"nav-link active\" href=\"Signup.jsp\">Sign-up</a>\n"
+    		  		+ "          </li>\n"
+    		  		+ "          <li class=\"nav-item\">\n"
+    		  		+ "            <a class=\"nav-link\" href=\"Login.jsp\">Login</a>\n"
+    		  		+ "          </li>");
     		  break;
     	  case "Login":
-    		  out.print("<body>\n"
-    		  		+ "	<div class=\"topnav\">\n"
-    		  		+ "        <b><img src=\"image/bank.png\" alt=\"alternatetext\" style=\"width:50px;height:50px;padding-left: 5px;padding-right: 5px\"></b>\n"
-    		  		+ "        <a style='color: white'>Perfios Bank</a>\n"
-    		  		+ "	    <a href=\"Home.jsp\">Home</a>\n"
-    		  		+ "	    <a href=\"Signup.jsp\">Signup</a>\n"
-    		  		+ "	    <a class=\"active\" href=\"Login.jsp\">Login</a>\n"
-    		  		+ "	    <a href=\"About.jsp\">About</a>\n"
-    		  		+ "	</div>\n"
-    		  		+ "</body>");
-    		  break;
-    	  case "About":
-    		  out.print("<body>\n"
-    		  		+ "	<div class=\"topnav\">\n"
-    		  		+ "        <b><img src=\"image/bank.png\" alt=\"alternatetext\" style=\"width:50px;height:50px;padding-left: 5px;padding-right: 5px\"></b>\n"
-    		  		+ "        <a style='color: white'>Perfios Bank</a>\n"
-    		  		+ "	    <a href=\"Home.jsp\">Home</a>\n"
-    		  		+ "	    <a href=\"Signup.jsp\">Signup</a>\n"
-    		  		+ "	    <a href=\"Login.jsp\">Login</a>\n"
-    		  		+ "	    <a class=\"active\" href=\"About.jsp\">About</a>\n"
-    		  		+ "	</div>\n"
-    		  		+ "</body>");
+    		  out.print("<li class=\"nav-item\">\n"
+    		  		+ "            <a class=\"nav-link\" aria-current=\"page\" href=\"Home.jsp\">Home</a>\n"
+    		  		+ "          </li>\n"
+    		  		+ "          <li class=\"nav-item\">\n"
+    		  		+ "            <a class=\"nav-link\" href=\"Signup.jsp\">Sign-up</a>\n"
+    		  		+ "          </li>\n"
+    		  		+ "          <li class=\"nav-item\">\n"
+    		  		+ "            <a class=\"nav-link active\" href=\"Login.jsp\">Login</a>\n"
+    		  		+ "          </li>");
     		  break;
     	  default:
     		  
     	  }
+    	  
+    	  out.print("</ul>\n"
+    	  		+ "        <form class=\"d-flex\" role=\"search\">\n"
+    	  		+ "          <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n"
+    	  		+ "          <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>\n"
+    	  		+ "        </form>\n"
+    	  		+ "      </div>\n"
+    	  		+ "    </div>\n"
+    	  		+ "  </nav>\n"
+    	  		+ "</header>"
+    	  		+ "<br><br>");
+    	  
       }
       catch(Exception e)
       {

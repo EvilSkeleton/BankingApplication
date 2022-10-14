@@ -39,34 +39,29 @@ input:invalid {
   transition: 0.3s;
   width: auto;
 }
+input:invalid:required {
+  border: 1px solid black;
+}
 </style>
 <body class="background">
 	<x:HomeNav page="Login"></x:HomeNav>
+	<br>
 	<div class="flex" style="display: flex;width:100%; height: 150%;">
         <div style="width: 50%; background: ;">
-            Left Div
         </div>
         <div class="center" style="flex-grow: 1; background:;align-items: center;justify-content: center;padding-top:150px">
         	<div class="center" style="background : ;padding-left: 20%;padding-right: 20%">
 				<div class="card">
-				<form action="LoginServlet" method="post">
+				<form name="login" action="LoginServlet" method="post">
 				<br>
 					<h1>Login Page</h1>
-						<table class="center">
-								<tr>
-									<td align="right"><label for="user">Enter AccountNo : </label></td>
-									<td align="left"><input type="text" name = "user"></td>
-								</tr>
-								<tr>
-								<tr>
-									<td align="right"><label for="pwd">Enter Password : </label></td>
-									<td align="left"><input type = "password" name = "pwd"></td>
-								</tr>
-						</table>
-<!-- 							<input type = "submit" value = "login"><br> -->
-								<input class="btn btn-primary" type="submit" value="Login"><br><br><br>
+					<div style="padding-left: 30px;padding-right: 30px">
+						<input type="text" class="form-control" required placeholder="Account Number" name = "user"><br>
+						<input type = "password" class="form-control" required placeholder="Password" name = "pwd"><br>
+						<input class="btn btn-primary" type="submit" value="Login"><br><br><br>
+					</div>
 				</form>
-								</div>
+				</div>
         	</div>
         </div>
 	</div>

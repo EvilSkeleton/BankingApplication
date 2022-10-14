@@ -7,6 +7,13 @@
 <meta charset="UTF-8">
 <title>Transfer</title>
 </head>
+<style>
+.center {
+	text-align : center;
+	margin-left: auto;
+  margin-right: auto;	
+}
+</style>
 <body>
 	<x:DashNav page="Transfer"></x:DashNav>
 		<div>

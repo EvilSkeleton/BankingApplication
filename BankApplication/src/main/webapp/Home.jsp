@@ -24,7 +24,7 @@
 <body class="background">
 	<x:HomeNav page="Home"></x:HomeNav>
 	<div>
-		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="">
+		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="background-color: black">
 		  <div class="carousel-inner">
 		    <div class="carousel-item active">
 		      <img src="image/img1.jpg" class="d-block w-100" alt="...">

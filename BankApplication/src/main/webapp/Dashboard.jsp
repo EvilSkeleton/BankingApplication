@@ -49,7 +49,8 @@
             }
 			
 		%>
-		<div>
+		<div style="font-size: 20px;">
+			<br><br><br>
 		<table style="text-align: left;">
 			<tr>
 				<td align="right">Account Number : </td>

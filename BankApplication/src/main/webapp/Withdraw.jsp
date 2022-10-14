@@ -18,7 +18,7 @@
 	<x:DashNav page="Withdraw"></x:DashNav>
 		<div>
 			<form action="WithServlet" method="post" class="center">
-					<h1>Enter Amount to Deposit</h1>
+					<h1>Enter Amount to Withdraw</h1>
 						<table class="center">
 								<tr>
 									<td align="right"><label for="amt">Enter Amount Number : </label></td>
